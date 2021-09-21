@@ -16,6 +16,9 @@ This is an [AutoHotkey](https://www.autohotkey.com/) script that I use on a dail
 #### Alt + S
 *Runs Windows ScreenSnip for making a quick screenshot.*
 
+#### Windows Key
+*Runs a [PowerToys](https://github.com/microsoft/PowerToys#microsoft-powertoys) feature called "Run". I use this in conjunction with [TaskBarX](https://chrisandriessen.nl/taskbarx), to create a clean environment.*
+
 #### Alt + Scroll
 *Horizontal scroll. Scrolling up means left and down means right.*
 
