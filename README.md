@@ -22,4 +22,4 @@ This is an [AutoHotkey](https://www.autohotkey.com/) script that I use on a dail
 #### Alt + Scroll
 *Horizontal scroll. Scrolling up means left and down means right.*
 
-That's not technically everything. I have another repository dedicated to running powershell by f12 key with additional fancy stuff. you can check it out [here](https://github.com/iQuerz/PowerShellAHK). If you have any suggestions, please contact me, I like adding useful shortcuts to my workflow.
+That's not technically everything. I have another repository dedicated to running powershell by f12 key with additional fancy stuff. you can check it out [here](https://github.com/iQuerz/PowerShellAHK#powershellahk). If you have any suggestions, please contact me, I like adding useful shortcuts to my workflow.
