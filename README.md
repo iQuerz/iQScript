@@ -23,3 +23,9 @@ This is an [AutoHotkey](https://www.autohotkey.com/) script that I use on a dail
 *Horizontal scroll. Scrolling up means left and down means right.*
 
 That's not technically everything. I have another repository dedicated to running powershell by f12 key with additional fancy stuff. you can check it out [here](https://github.com/iQuerz/PowerShellAHK#powershellahk). If you have any suggestions, please contact me, I like adding useful shortcuts to my workflow.
+
+
+### Current version: v1.1
+Fixed "file explorer not opening" issue, changed how the windows button functions. Now you can use shortcuts with windows key as a modifier)  
+**History:**  
+v1.0 (first iteration)
