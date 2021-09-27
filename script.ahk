@@ -13,7 +13,12 @@ return
 SendInput {Alt Down}{Tab}{Alt Up}
 return
 
-; alt+a for notifications
+;alt+e for my computer
+!E::
+Run C:\Windows\explorer.exe
+return
+
+;alt+a for notifications
 !A::SendInput #a
 return
 
@@ -22,19 +27,12 @@ return
 Run C:\WINDOWS\system32\SnippingTool.exe /clip
 return
 
-;alt+e for my computer
-!E::SendInput {Lwin}E
-return
+;Use windows key for PowerToys Run, but retain the functionality of other shortcuts using Windows key
+#If A_PriorLey == "LWin"
+LWin Up::Send ^{Space}
+#If
 
-;remap Lwin button to run "powertoys run"(mine is set to ctrl+space)
-LWin::SendInput ^{Space}
-return
-
-;aaand use alt+win for actual win button, if you ever need it
-!LWin::SendInput {Lwin}
-return
-
-; win+scroll up to scroll left.
+; alt+scroll up to scroll left.
 !WheelUp::SendInput {WheelLeft}
 return
 
