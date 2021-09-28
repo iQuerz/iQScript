@@ -28,7 +28,7 @@ Run C:\WINDOWS\system32\SnippingTool.exe /clip
 return
 
 ;Use windows key for PowerToys Run, but retain the functionality of other shortcuts using Windows key
-#If A_PriorLey == "LWin"
+#If A_PriorKey == "LWin"
 LWin Up::Send ^{Space}
 #If
 
