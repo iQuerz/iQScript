@@ -22,10 +22,15 @@ This is an [AutoHotkey](https://www.autohotkey.com/) script that I use on a dail
 #### Alt + Scroll
 *Horizontal scroll. Scrolling up means left and down means right.*
 
-That's not technically everything. I have another repository dedicated to running powershell by f12 key with additional fancy stuff. you can check it out [here](https://github.com/iQuerz/PowerShellAHK#powershellahk). If you have any suggestions, please contact me, I like adding useful shortcuts to my workflow.
+#### Semicolon + `I`,`J`,`K` & `L` Keys
+*Simulates arrow keys while holding down the semicolon. Useful when your hands are on the homerow position.*
+
+That's not technically everything. I have another repository dedicated to running powershell by f12 key with additional fancy stuff. you can check it out [here](https://github.com/iQuerz/PowerShellAHK#powershellahk). If you have any thoughts or suggestions, your words are more than welcome.
 
 
-### Current version: v1.1
-Fixed "file explorer not opening" issue, changed how the windows button functions. Now you can use shortcuts with windows key as a modifier)  
+### Current version: v1.2
+Added new feature, you can now use `I`,`J`,`K` and `L` keys as arrow keys while holding down the `;` button.
+
 **History:**  
-v1.0 (first iteration)
+v1.1 (Fixed "file explorer not opening" issue, changed how the windows button functions. Now you can use shortcuts with windows key as a modifier)  
+v1.0 (first iteration, at least... when I got the idea to upload this here)
