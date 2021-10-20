@@ -32,6 +32,6 @@ If you like my work, I have another repository dedicated to running powershell b
 Fixed a bug where typing ';' or ':' sometimes wouldn't work.
 
 ### Version History:
-**v1.2**: (Added new feature, arrow keys simulation with `I`,`J`,`K` and `L` keys while holding down the `;` button.)
-**v1.1**: (Fixed "file explorer not opening" issue, changed how the windows button functions. Now you can use shortcuts with windows key as a modifier.)  
+**v1.2**: (Added new feature, arrow keys simulation with `I`,`J`,`K` and `L` keys while holding down the `;` button.)  
+**v1.1**: (Fixed "file explorer not opening" issue, changed how the windows button functions. Now you can use shortcuts that use windows key as a modifier.)  
 **v1.0**: (first iteration, at least... when I got the idea to upload this here)
