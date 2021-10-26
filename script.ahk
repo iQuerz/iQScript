@@ -1,27 +1,28 @@
 ﻿#MaxHotkeysPerInterval 15000
 #NoEnv
+#SingleInstance, Force
+#UseHook
 SendMode Input
 SetWorkingDir %A_ScriptDir%
 
 ; alt+q for close
 !Q::
-WinClose A
-	SendInput !Tab
+	WinClose A
 return
 
 ; alt+w for minimize
 !W::
-WinMinimize A
-	SendInput !Tab
+	WinMinimize A
 return
 
-;alt+e for my computer
+; alt+e for my computer
 !E::
 	Run C:\Windows\explorer.exe
 return
 
 ; alt+a for notifications
-	!A::SendInput #a
+!A::
+	SendInput #a
 return
 
 ; alt+s for screenshot
@@ -52,21 +53,13 @@ return
 
 ; Next bit of the code is for simulating arrow keys with I, J, K, L while holding down ';'.
 ;  Helpful when your hands are at the homerow position
+SC0027 & I::Up
+SC0027 & J::Left
+SC0027 & K::Down
+SC0027 & L::Right
++SC0027:::
 
-; first, make sure the semicolon works on its own
-if (A_PriorHotkey == ";") {
-	`;::
+#If A_PriorKey == ";"
+	SC0027 Up::
 		Send `;
-}
-
-; and then, return the shift+; for : functionality.
-+`;::
-	Send :
-return
-
-; the star of the show, ladies and gentlemen, the "I'm lazy to move my hands over to the arrow cluster"
-#UseHook
-`; & I::Up
-`; & J::Left
-`; & K::Down
-`; & L::Right
+#If
