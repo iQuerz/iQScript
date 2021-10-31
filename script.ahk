@@ -15,6 +15,21 @@ return
 	WinMinimize A
 return
 
+; alt + 8 for delete
+!8::
+	SendInput {Delete}
+return
+
+; alt + 9 for home
+!9::
+	SendInput {Home}
+return
+
+; alt + 0 for end
+!0::
+	SendInput {End}
+return
+
 ; alt+e for my computer
 !E::
 	Run C:\Windows\explorer.exe
