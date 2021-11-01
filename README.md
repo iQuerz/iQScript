@@ -31,12 +31,13 @@ This is an [AutoHotkey](https://www.autohotkey.com/) script that I use on a dail
 If you like my work, I have another repository dedicated to running powershell by f12 key with additional fancy stuff. You can check it out [here](https://github.com/iQuerz/PowerShellAHK#powershellahk). If you have any thoughts or suggestions, your words are more than welcome.
 
 
-### Current version: 1.5
-New feature: Alt + 8, 9 or 0 for Delete, Home and End, respectively.
+## Current version: 1.6
+Added support for automatic updates.
 
 ### Version History:
-**v1.4**: (Minor bugfixes and performance tweaks)
-**v1.3**: (Fixed a bug where typing ';' or ':' sometimes wouldn't work.)
+**v1.5**: (New feature: Alt + 8, 9 or 0 for Delete, Home and End, respectively.)  
+**v1.4**: (Minor bugfixes and performance tweaks)  
+**v1.3**: (Fixed a bug where typing ';' or ':' sometimes wouldn't work.)  
 **v1.2**: (New feature: arrow keys simulation with `I`,`J`,`K` and `L` keys while holding down the `;` button.)  
-**v1.1**: (Fixed "file explorer not opening" issue, changed how the windows button functions. Now you can use shortcuts that use windows key as a modifier.)  
+**v1.1**: (Fixed "file explorer not opening" and "shortcuts with windows button not working" issues)  
 **v1.0**: (first iteration, at least... when I got the idea to upload this here)

@@ -1,4 +1,16 @@
-﻿#MaxHotkeysPerInterval 15000
+currentVersion = 1.6
+
+request := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+request.Open("GET", "https://raw.githubusercontent.com/iQuerz/MyAHKScript/main/ver.txt", true)
+request.Send()
+request.WaitForResponse()
+version := request.ResponseText
+
+If(currentVersion != version){
+	Run dialog.ahk
+}
+
+#MaxHotkeysPerInterval 15000
 #NoEnv
 #SingleInstance, Force
 #UseHook
@@ -63,7 +75,7 @@ return
 
 ; internal joke, you can skip & ignore or delete this part
 !C::
-	Send ce bude™
+	Send ce bude�
 return
 
 ; Next bit of the code is for simulating arrow keys with I, J, K, L while holding down ';'.
