@@ -32,11 +32,10 @@ Update:
 	; What were you doing here? You've just made "urrentVersion = 1.6" instead of "currentVersion = 1.6"
 	;StringLen, length, text
 	;scriptContent := SubStr(text, 2, length)
-	;FileAppend, %scriptContent%, temp.txt
 	;-------------------------------------------------------------
 	; If you want to overwrite a file, just delete it before FileAppend.
 	; We don't need this "temporary file" things:
-	;FileAppend, %text%, temp.txt
+	;FileAppend, %scriptContent%, temp.txt
 	;FileMove, temp.txt, script.ahk, true
 	;-------------------------------------------------------------
 	FileDelete, script.ahk
