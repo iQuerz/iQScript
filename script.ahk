@@ -88,7 +88,7 @@ SC0027 & K::Down
 SC0027 & L::Right
 +SC0027:::
 
-#If A_PriorKey == ";"
-	SC0027 Up::
-		Send `;
-#If
+;#If A_PriorKey == ";"
+; You just don't need this #If stuff here. Test it and you'll see.
+	SC0027 Up::Send `;
+;#If
