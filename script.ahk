@@ -18,9 +18,11 @@ SendMode Input
 SetWorkingDir %A_ScriptDir%
 
 ; alt+q for close
-!Q::
-	WinClose A
-return
+;!Q::
+;	WinClose A
+;return
+; Do you remember that you can write 1-line commands without following 'return'?
+!Q:: WinClose A
 
 ; alt+w for minimize
 !W::
@@ -75,7 +77,7 @@ return
 
 ; internal joke, you can skip & ignore or delete this part
 !C::
-	Send ce bude™
+	Send ce budeâ„¢
 return
 
 ; Next bit of the code is for simulating arrow keys with I, J, K, L while holding down ';'.
@@ -86,7 +88,7 @@ SC0027 & K::Down
 SC0027 & L::Right
 +SC0027:::
 
-#If A_PriorKey == ";"
-	SC0027 Up::
-		Send `;
-#If
+;#If A_PriorKey == ";"
+; You just don't need this #If stuff here. Test it and you'll see.
+	SC0027::Send `;    ; You don't need Up here.
+;#If
