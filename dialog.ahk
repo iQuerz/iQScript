@@ -10,16 +10,10 @@ Gui, Show, CenterAutosize, Update
 Return
 
 Update:
-;-------------------------------------------------------------
-; Lexicos says: "WinHttpRequest does not use TLS 1.1 or 1.2 by default on Windows 7 and older".
-; So he uses Msxml2.XMLHTTP here: https://github.com/Lexikos/AutoHotkey-Release/commit/4622287857dbbb2f23dfc91615c5b3b6650241ac
-; And we will use it.
-; Frankly speaking, I get strange encoding in var text while using your WinHttpRequest code. With Msxml2.XMLHTTP everything is ok.
-;-------------------------------------------------------------
 	request := ComObjCreate("Msxml2.XMLHTTP")
 	request.Open("GET", "https://raw.githubusercontent.com/iQuerz/MyAHKScript/main/script.ahk", true)
 	request.Send()
-	while (request.readyState != 4 && A_Index <= 50)    ; We will wait for response 5 seconds at maximum (50*100 ms = 5000 ms).
+	while (request.readyState != 4 && A_Index <= 50)    ; Wait for response 5s max (50*100 = 5000ms).
 		sleep 100
 	if request.readyState != 4 {
 		MsgBox, Connection to the server failed, try to update later.
@@ -28,21 +22,10 @@ Update:
 		else MsgBox, A miracle has just happened, we've got the update!
 	}
   	text := request.ResponseText
-	;-------------------------------------------------------------
-	; What were you doing here? You've just made "urrentVersion = 1.6" instead of "currentVersion = 1.6"
-	;StringLen, length, text
-	;scriptContent := SubStr(text, 2, length)
-	;-------------------------------------------------------------
-	; If you want to overwrite a file, just delete it before FileAppend.
-	; We don't need this "temporary file" things:
-	;FileAppend, %scriptContent%, temp.txt
-	;FileMove, temp.txt, script.ahk, true
-	;-------------------------------------------------------------
 	FileDelete, script.ahk
 	FileAppend, % text, script.ahk
 	Run script.ahk
-	;FileDelete, temp.txt  ; We don't need this line too.
 
-GuiClose:   ; If user closes the gui window you should terminate dialog.ahk. Look at GuiClose in the documentation.
+GuiClose:
 Close:
 	ExitApp
