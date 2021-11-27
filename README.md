@@ -16,7 +16,7 @@ This is an [AutoHotkey](https://www.autohotkey.com/) script that I use on a dail
 
 ## Feature List:
 - **Automagical installer**:  
-*Portable installer that concocts the script to your liking. Just select what features you like.*
+*Portable installer that concocts the script to your liking. Just select what features you want.*
 
 - **Alt + Q**:  
 *Closes the Active Window and brings to focus last one used.*
@@ -59,7 +59,7 @@ This is an [AutoHotkey](https://www.autohotkey.com/) script that I use on a dail
 Performance tweaks. Added CapsLock floating indicator and NumPad homerow. Easy setup with configurator tool.
 
 ## Version History:
-**v1.7**: (Small bugfixes, code readability tweak and removal of some legacy classes.)
+**v1.7**: (Small bugfixes, code readability tweak and removal of some legacy classes.)  
 **v1.6**: (Added support for automatic updates.)  
 **v1.5**: (New feature: Alt + 8, 9 or 0 for Delete, Home and End, respectively.)  
 **v1.4**: (Minor bugfixes and performance tweaks)  
