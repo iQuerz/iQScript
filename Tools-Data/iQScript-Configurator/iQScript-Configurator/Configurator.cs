@@ -113,12 +113,18 @@ namespace iQScript_Configurator
             File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\iQscript.lnk");
             File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.CommonStartup) + "\\iQscript.lnk");
 
-            emptyDir(new DirectoryInfo
-                (Environment.GetFolderPath
-                    (Environment.SpecialFolder.CommonPrograms)
-                        + "\\iQScript"));
+            if (Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.CommonPrograms) + "\\iQScript"))
+            {
+                emptyDir(new DirectoryInfo
+                    (Environment.GetFolderPath
+                        (Environment.SpecialFolder.CommonPrograms)
+                            + "\\iQScript"));
+            }
 
-            emptyDir(new DirectoryInfo(path));
+            if (Directory.Exists(path))
+            {
+                emptyDir(new DirectoryInfo(path));
+            }
         }
         public void emptyDir(DirectoryInfo dir)
         {

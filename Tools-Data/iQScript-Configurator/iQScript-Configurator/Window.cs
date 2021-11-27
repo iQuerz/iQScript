@@ -97,7 +97,7 @@ namespace iQScript_Configurator
             install();
             IWin32Window owner = this;
             MessageBox.Show(owner, "iQScript removed successfully. Hope to see you soon!", "iQScript-Configurator");
-            this.Dispose();
+            Dispose();
         }
 
         private void SaveRunButton_Click(object sender, EventArgs e)
@@ -106,12 +106,12 @@ namespace iQScript_Configurator
             Process.Start(installPath + "\\Scripts\\iQscript.ahk");
             IWin32Window owner = this;
             MessageBox.Show(owner, "iQScript removed successfully. Hope to see you soon!", "iQScript-Configurator");
-            this.Dispose();
+            Dispose();
         }
 
         private void QuitButton_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
         }
 
         private void browseButton_Click(object sender, EventArgs e)
@@ -167,7 +167,7 @@ namespace iQScript_Configurator
             {
                 IWin32Window owner = this;
                 MessageBox.Show(owner, "Selected features have been installed successfuly. Enjoy.", "iQScript-Configurator");
-                this.Dispose();
+                Dispose();
             }
         }
         private void uninstall()
@@ -179,19 +179,22 @@ namespace iQScript_Configurator
             catch (Exception ex)
             {
                 logAndNotify(ex);
+            }
+            finally
+            {
                 Dispose();
             }
         }
         private void logAndNotify(Exception e)
         {
-            string message = @"Installation ran into an error. 
-                            The information about this crash has been stored inside " + installPath + @"\\Logs. 
+            string message = @"Installation ran into an error.
+                            More about this crash has been stored inside " + installPath.Text + @"\Logs.
                             Please contact the developer with this information.";
 
             MessageBox.Show(this, message, "Error Message");
 
-            DirectoryInfo di = Directory.CreateDirectory(installPath + "\\Logs");
-            StreamWriter logger = new StreamWriter($"{di.FullName}\\log-{DateTime.Now.Day}-{DateTime.Now.Month}-{DateTime.Now.Year}_{DateTime.Now.Hour}:{DateTime.Now.Minute}");
+            DirectoryInfo di = Directory.CreateDirectory(installPath.Text + "\\Logs");
+            StreamWriter logger = new StreamWriter($"{di.FullName}\\log-{DateTime.Now.Day}-{DateTime.Now.Month}-{DateTime.Now.Year}_{DateTime.Now.Hour}h{DateTime.Now.Minute}m.log");
             logger.WriteLine("Error: " + e.Message);
             logger.WriteLine(e.StackTrace);
             logger.Dispose();
