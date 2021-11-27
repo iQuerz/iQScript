@@ -1,0 +1,17 @@
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\bin\Debug\netcoreapp3.1\iQScript-Configurator.exe
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\bin\Debug\netcoreapp3.1\iQScript-Configurator.deps.json
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\bin\Debug\netcoreapp3.1\iQScript-Configurator.runtimeconfig.json
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\bin\Debug\netcoreapp3.1\iQScript-Configurator.runtimeconfig.dev.json
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\bin\Debug\netcoreapp3.1\iQScript-Configurator.dll
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\bin\Debug\netcoreapp3.1\iQScript-Configurator.pdb
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\obj\Debug\netcoreapp3.1\iQScript-Configurator.csproj.AssemblyReference.cache
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\obj\Debug\netcoreapp3.1\iQScript_Configurator.Resources.resources
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\obj\Debug\netcoreapp3.1\iQScript_Configurator.MainWindow.resources
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\obj\Debug\netcoreapp3.1\iQScript-Configurator.csproj.GenerateResource.cache
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\obj\Debug\netcoreapp3.1\iQScript-Configurator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\obj\Debug\netcoreapp3.1\iQScript-Configurator.AssemblyInfoInputs.cache
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\obj\Debug\netcoreapp3.1\iQScript-Configurator.AssemblyInfo.cs
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\obj\Debug\netcoreapp3.1\iQScript-Configurator.csproj.CoreCompileInputs.cache
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\obj\Debug\netcoreapp3.1\iQScript-Configurator.dll
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\obj\Debug\netcoreapp3.1\iQScript-Configurator.pdb
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\obj\Debug\netcoreapp3.1\iQScript-Configurator.genruntimeconfig.cache

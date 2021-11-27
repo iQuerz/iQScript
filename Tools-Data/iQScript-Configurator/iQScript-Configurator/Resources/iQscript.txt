@@ -1,0 +1,99 @@
+﻿SetWorkingDir %A_ScriptDir%
+currentVersion = 2.0
+
+request := ComObjCreate("Msxml2.XMLHTTP")
+	request.Open("GET", "https://raw.githubusercontent.com/iQuerz/MyAHKScript/main/ver.txt", true)
+	request.Send()
+	while (request.readyState != 4 && A_Index <= 50)    ; Wait for response 5s max (50*100 = 5000ms).
+		sleep 100
+	if request.readyState != 4 {
+		Goto Continue
+	}
+  	version := request.ResponseText
+
+If(currentVersion != version){
+	Run iQdialog.ahk
+}
+
+Continue:	; Continues to the script if update check fails
+
+#MaxHotkeysPerInterval 15000
+#NoEnv
+#SingleInstance, Force
+#UseHook
+
+;AltQClose alt+q for close
+!Q:: WinClose A
+
+;AltWMinimize alt+w for minimize
+!W:: WinMinimize A
+
+;Alt8Del alt + 8 for delete
+!8:: SendInput {Delete}
+
+;Alt9Home alt + 9 for home
+!9:: SendInput {Home}
+
+;Alt0End alt + 0 for end
+!0:: SendInput {End}
+
+;AltEExplorer alt+e for my computer
+!E:: Run C:\Windows\explorer.exe
+
+;AltANotificationPanel alt+a for notifications
+!A:: SendInput #a
+
+;AltSScreenshot alt+s for screenshot (you have to set screensnip to PrtSc for this to work, Settings->Accessibility->Keyboard->Use PrtSc...)
+!S:: SendInput {PrintScreen}
+
+;LWinPowerToys Use windows key for PowerToys Run, but retain the functionality of other shortcuts using Windows key
+#If A_PriorKey == "LWin"
+	LWin Up::
+		SendInput !r
+#If
+
+;AltScrollHorizontalScroll alt+scroll up to scroll left and down to scroll right.
+!WheelUp:: SendInput {WheelLeft}
+!WheelDown:: SendInput {WheelRight}
+
+;CapsLockFloat CapsLock floating window
+CapsLock::
+	SendInput {CapsLock}
+	check := GetKeyState("CapsLock", "T")
+	if(check == 1){
+		Run iQcaps.ahk
+	}
+return
+
+;NumPadHomerowFloat Ctrl+CapsLock for Homerow NumPad. 'o' represents 0 because ; is used for arrow keys simulation(see below)
+numpad = false
+^CapsLock::
+	numpad := !numpad
+	if(numpad == true){
+		Run iQnumpad.ahk
+	}
+	if(numpad == false){
+		;Process, Close, numpad.ahk
+	}
+return
+
+#if numpad == true
+	*a::1
+	*s::2
+	*d::3
+	*f::4
+	*g::5
+	*h::6
+	*j::7
+	*k::8
+	*l::9
+	*o::0
+#if
+
+;SemiColonArrowSim Next bit of the code is for simulating arrow keys with I, J, K, L while holding down ';'. Helpful when your hands are at the homerow position
+SC0027 & I::Up
+SC0027 & J::Left
+SC0027 & K::Down
+SC0027 & L::Right
++SC0027:::
+SC0027::Send `;
