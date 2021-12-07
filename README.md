@@ -7,7 +7,7 @@ Most browsers flag unsigned .exe files as dangerous or viruses. I do not have mo
 ## GoTo:
 [About](https://github.com/iQuerz/MyAHKScript#about)  
 [Feature List](https://github.com/iQuerz/MyAHKScript#feature-list)  
-[Current Version](https://github.com/iQuerz/MyAHKScript#current-version-17)  
+[Current Version](https://github.com/iQuerz/MyAHKScript#current-version-20)  
 [Version History](https://github.com/iQuerz/MyAHKScript#version-history)  
 [Future Plans](https://github.com/iQuerz/MyAHKScript#todo)
 
