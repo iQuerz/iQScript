@@ -1,0 +1,2 @@
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\bin\Release\netcoreapp3.1\publish\iQScript-Configurator.pdb
+D:\Programming-Projects\iQ-AHK-Script\Tools-Data\iQScript-Configurator\iQScript-Configurator\bin\Release\netcoreapp3.1\publish\iQScript-Configurator.exe

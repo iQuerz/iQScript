@@ -6,8 +6,8 @@ namespace iQScript_Configurator
 {
     class Configurator
     {
-        Dictionary<Features, string> _features;
-        MainWindow _mainWindow;
+        readonly Dictionary<Features, string> _features;
+        readonly MainWindow _mainWindow;
         public Configurator(MainWindow mainWindow)
         {
             _features = new Dictionary<Features, string>();
