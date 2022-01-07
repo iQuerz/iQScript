@@ -15,6 +15,7 @@ namespace iQScript_Configurator
         }
 
         #region install
+
         // Concoct the script based on user's choices.
         public void install(string path, List<Features> featuresToInstall)
         {
@@ -81,6 +82,7 @@ namespace iQScript_Configurator
             #endregion
         }
 
+
         // Tie each feature with its code snippet
         private void loadData()
         {
@@ -105,9 +107,11 @@ namespace iQScript_Configurator
             }
             _features.Add(feature, buffer);
         }
+
         #endregion
 
         #region uninstall
+
         public void uninstall(string path)
         {
             File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\iQscript.lnk");
@@ -134,9 +138,11 @@ namespace iQScript_Configurator
                 emptyDir(subdir);
             dir.Delete();
         }
+
         #endregion
 
         #region shortcuts
+
         // Create a shortcut inside the Start Menu folder.
         private void StartMenu(string pathToFile)
         {
@@ -145,6 +151,7 @@ namespace iQScript_Configurator
             ShortcutTool.MakeShortcut(pathToFile, path + "\\iQScript\\iQscript.lnk", "iQScript");
         }
 
+
         // Create a shortcut inside the Startup folder.
         private void Startup(string pathToFile)
         {
@@ -152,12 +159,14 @@ namespace iQScript_Configurator
             ShortcutTool.MakeShortcut(pathToFile, path + "\\iQscript.lnk", "iQScript");
         }
 
+
         // Create a shortcut inside the Desktop folder
         private void Desktop(string pathToFile)
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             ShortcutTool.MakeShortcut(pathToFile, path + "\\iQscript.lnk", "iQScript");
         }
+
         #endregion
     }
 }

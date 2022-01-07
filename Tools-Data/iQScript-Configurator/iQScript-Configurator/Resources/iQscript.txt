@@ -1,5 +1,7 @@
 ﻿SetWorkingDir %A_ScriptDir%
-currentVersion = 2.1
+currentVersion = 2.2
+
+CheckUpdate:
 
 request := ComObjCreate("Msxml2.XMLHTTP")
 	request.Open("GET", "https://raw.githubusercontent.com/iQuerz/MyAHKScript/main/ver.txt", true)
@@ -16,6 +18,7 @@ If(currentVersion != version){
 }
 
 Continue:	; Continues to the script if update check fails
+SetTimer, CheckUpdate, 86400000 ;(that's every 24h)
 
 #MaxHotkeysPerInterval 15000
 #NoEnv
@@ -29,7 +32,18 @@ Continue:	; Continues to the script if update check fails
 !W:: WinMinimize A
 
 ;Alt8Del alt + 8 for delete
-!8:: SendInput {Delete}
+!8::
+	IfWinActive ahk_class CabinetWClass
+    {
+        ControlGetFocus, FocusedControl, A
+        If FocusedControl contains DirectUIHWND, SysListView
+            SendInput, {AppsKey}d
+        else
+            SendInput, {Delete}
+    }
+    else
+        SendInput, {Delete}
+return
 !+8:: SendInput +{Delete}
 
 ;Alt9Home alt + 9 for home
@@ -61,15 +75,6 @@ Continue:	; Continues to the script if update check fails
 !WheelUp:: SendInput {WheelLeft}
 !WheelDown:: SendInput {WheelRight}
 
-;CapsLockFloat CapsLock floating window
-CapsLock::
-	SendInput {CapsLock}
-	check := GetKeyState("CapsLock", "T")
-	if(check == 1){
-		Run iQcaps.ahk
-	}
-return
-
 ;NumPadHomerowFloat Ctrl+CapsLock for Homerow NumPad. 'o' represents 0 because ; is used for arrow keys simulation(see below)
 numpad = false
 ^CapsLock::
@@ -79,6 +84,15 @@ numpad = false
 	}
 	if(numpad == false){
 		;Process, Close, numpad.ahk
+	}
+return
+
+;CapsLockFloat CapsLock floating window
+*CapsLock::
+	SendInput {CapsLock}
+	check := GetKeyState("CapsLock", "T")
+	if(check == 1){
+		Run iQcaps.ahk
 	}
 return
 

@@ -23,7 +23,10 @@ namespace iQScript_Configurator
         {
             if (!IsAdministrator())
             {
-                MessageBox.Show(this, "This tool won't work without admin privileges.\n Consider restarting it as an administrator.","Elevation required");
+                MessageBox.Show(this, "This tool won't work without admin privileges.\n " +
+                    "Consider restarting it as an administrator.",
+                    "Elevation required",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Dispose();
             }
             _configurator = new Configurator(this);
@@ -51,6 +54,7 @@ namespace iQScript_Configurator
         {
             _desktop = DesktopChk.Checked;
         }
+
         private void CheckAll_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckAll.Checked)
@@ -88,6 +92,7 @@ namespace iQScript_Configurator
                 CheckAll.Text = "Check All";
             }
         }
+
         #endregion
 
         #region Buttons
@@ -132,6 +137,7 @@ namespace iQScript_Configurator
             AHKDownloader.InstallAHK();
             UseWaitCursor = false;
         }
+
         #endregion
 
         #region logic
