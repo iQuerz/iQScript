@@ -9,10 +9,12 @@ namespace iQScript_Configurator
 {
     public partial class MainWindow : Form
     {
+        private string _version = "2.3";
         Configurator _configurator;
         public bool _startup = true;
         public bool _startMenu = false;
         public bool _desktop = false;
+
         public MainWindow getForm() { return this; }
 
         public MainWindow()
@@ -23,12 +25,14 @@ namespace iQScript_Configurator
         {
             if (!IsAdministrator())
             {
-                MessageBox.Show(this, "This tool won't work without admin privileges.\n " +
-                    "Consider restarting it as an administrator.",
+                MessageBox.Show(this, "This tool won't work without admin privileges.\n" +
+                    "Consider restarting it as an administrator.\n" +
+                    "(Right-Click -> \"Run as Administrator\")",
                     "Elevation required",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Dispose();
             }
+            Text += $" - v{_version}";
             _configurator = new Configurator(this);
             string programFiles = Environment.ExpandEnvironmentVariables("%ProgramW6432%");
             installPath.Text = programFiles + "\\iQScript";
@@ -99,19 +103,12 @@ namespace iQScript_Configurator
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            install();
-            IWin32Window owner = this;
-            MessageBox.Show(owner, "iQScript removed successfully. Hope to see you soon!", "iQScript-Configurator");
-            Dispose();
+            install(false);
         }
 
         private void SaveRunButton_Click(object sender, EventArgs e)
         {
-            install();
-            Process.Start(installPath + "\\Scripts\\iQscript.ahk");
-            IWin32Window owner = this;
-            MessageBox.Show(owner, "iQScript removed successfully. Hope to see you soon!", "iQScript-Configurator");
-            Dispose();
+            install(true);
         }
 
         private void QuitButton_Click(object sender, EventArgs e)
@@ -131,22 +128,25 @@ namespace iQScript_Configurator
             uninstall();
         }
 
-        private void installAHKButton_Click(object sender, EventArgs e)
+        private async void installAHKButton_Click(object sender, EventArgs e)
         {
             UseWaitCursor = true;
-            AHKDownloader.InstallAHK();
+            await AHKDownloader.InstallAHK(this);
             UseWaitCursor = false;
         }
 
         #endregion
 
         #region logic
-        private void install()
+
+        private void install(bool start)
         {
             try
             {
                 List<Features> featuresToInstall = new List<Features>();
-                foreach (Control c in this.Controls)
+
+                // reading from checkboxes and adding selected features
+                foreach (Control c in Controls)
                 {
                     if (c.GetType() == typeof(CheckBox))
                     {
@@ -155,6 +155,7 @@ namespace iQScript_Configurator
                         {
                             if (!chk.Equals(CheckAll) && !chk.Equals(StartupChk) && !chk.Equals(StartMenuChk) && !chk.Equals(DesktopChk))
                             {
+                                // - 3 from chk.Name.Length because name of checkboxes is made like "{featureName}Chk"
                                 string featureString = chk.Name.Substring(0, chk.Name.Length - 3);
                                 featuresToInstall.Add((Features)Enum.Parse(typeof(Features), featureString));
                             }
@@ -171,8 +172,11 @@ namespace iQScript_Configurator
             }
             finally
             {
+                if(start)
+                    Process.Start(installPath + "\\Scripts\\iQscript.ahk");
                 IWin32Window owner = this;
-                MessageBox.Show(owner, "Selected features have been installed successfuly. Enjoy.", "iQScript-Configurator");
+                MessageBox.Show(owner, "Selected features have been installed successfuly. Enjoy.", "iQScript-Configurator",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Dispose();
             }
         }
@@ -188,20 +192,24 @@ namespace iQScript_Configurator
             }
             finally
             {
+                IWin32Window owner = this;
+                MessageBox.Show(owner, "Selected features have been removed successfuly.\nHope to see you soon!", "iQScript-Configurator",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Dispose();
             }
         }
-        private void logAndNotify(Exception e)
+        public void logAndNotify(Exception e)
         {
             string message = @"Installation ran into an error.
                             More about this crash has been stored inside " + installPath.Text + @"\Logs.
                             Please contact the developer with this information.";
 
-            MessageBox.Show(this, message, "Error Message");
+            MessageBox.Show(this, message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             DirectoryInfo di = Directory.CreateDirectory(installPath.Text + "\\Logs");
             StreamWriter logger = new StreamWriter($"{di.FullName}\\log-{DateTime.Now.Day}-{DateTime.Now.Month}-{DateTime.Now.Year}_{DateTime.Now.Hour}h{DateTime.Now.Minute}m.log");
-            logger.WriteLine("Error: " + e.Message);
+            logger.WriteLine($"Version: {_version}");
+            logger.WriteLine($"Error: {e.Message}");
             logger.WriteLine(e.StackTrace);
             logger.Dispose();
         }
@@ -210,6 +218,7 @@ namespace iQScript_Configurator
             return (new WindowsPrincipal(WindowsIdentity.GetCurrent()))
                       .IsInRole(WindowsBuiltInRole.Administrator);
         }
+
         #endregion
     }
 }

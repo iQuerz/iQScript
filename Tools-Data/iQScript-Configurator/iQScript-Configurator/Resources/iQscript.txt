@@ -1,5 +1,5 @@
 ﻿SetWorkingDir %A_ScriptDir%
-currentVersion = 2.2
+currentVersion = 2.3
 
 CheckUpdate:
 
@@ -82,9 +82,6 @@ numpad = false
 	if(numpad == true){
 		Run iQnumpad.ahk
 	}
-	if(numpad == false){
-		;Process, Close, numpad.ahk
-	}
 return
 
 ;CapsLockFloat CapsLock floating window
@@ -114,5 +111,5 @@ SC0027 & I::Up
 SC0027 & J::Left
 SC0027 & K::Down
 SC0027 & L::Right
-+SC0027:::
-SC0027::Send `;
++SC0027:: +{SC0027}
+SC0027::Send {SC0027}

@@ -2,7 +2,7 @@
 
 Gui, Font, cBlack
 Gui, Add, Text,, New version of script is available. Would you like to update?
-Gui, Add, Link,, <a href="https://github.com/iQuerz/MyAHKScript">Download new version</a>
+Gui, Add, Link,, <a href="https://github.com/iQuerz/MyAHKScript#readme">Download new version</a>
 Gui, Add, Button, gClose, Close
 Gui, Show, CenterAutosize, Update Available
 Return
