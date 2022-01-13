@@ -1,15 +1,15 @@
 # Welcome to Version 2!🎉🎉
-I've made it so anyone can have this script without the need of setting it up. Just download, run the installer, select what features you want and you're done! You may choose for it to place the script in the start menu, on the desktop, and even run it on startup! It can install [AutoHotkey](https://www.autohotkey.com/) too, which is required for this script to work. Uninstalling the script is as simple as a click of a button. No harm done.
+I've made it so anyone can have this script without the need of setting it up. Just download, run the installer, select what features you want and you're done! You may choose for it to place the script shortcut in the start menu, on the desktop, and even run it on startup! It can install [AutoHotkey](https://www.autohotkey.com/) too, which is required for this script to work. Uninstalling the script is as simple as a click of a button. No harm done.
 
 ## Important note before you download the installer:
 Most browsers flag unsigned .exe files as dangerous or viruses. I do not have money to digitally sign my work, so you will just have to trust me, or read the code, which is openly available for everyone to check. This software is accessing OS reserved folders such as `Program Files`, which is likely one of the reasons it's being flagged as dangerous. I assure you that this software *does not* alter any OS files. It is *not* a virus. If you do not trust me, as I said, the code is openly available for everyone and you may check every bit of it. You may even build it yourself if you wish. The tools used are `Visual Studio 2019`. Project is built in `.NET Core 3.1`.
 
-### [Download Installer](https://download1510.mediafire.com/mvg3sjn6mdng/3klb9downcx559r/iQScript-Configurator.exe)
+### [Download Installer](https://download1583.mediafire.com/sndup0yni9wg/3klb9downcx559r/iQScript-Configurator.exe)
 
 ## GoTo:
 [About](https://github.com/iQuerz/MyAHKScript#about)  
 [Feature List](https://github.com/iQuerz/MyAHKScript#feature-list)  
-[Current Version](https://github.com/iQuerz/MyAHKScript#current-version-22)  
+[Current Version](https://github.com/iQuerz/MyAHKScript#current-version-23)  
 [Version History](https://github.com/iQuerz/MyAHKScript#version-history)  
 [Future Plans](https://github.com/iQuerz/MyAHKScript#todo)
 
@@ -57,10 +57,11 @@ This is an [AutoHotkey](https://www.autohotkey.com/) script that I use on a dail
 *Checks for updates regularly and offers to download the new version installer*
 
 
-## Current Version: 2.2
-Bugfixes. Small QOL changes. Hosting migrated away from GH LFS.
+## Current Version: 2.3
+arrow keys simulation feature now works with every keyboard layout. Big installer improvements.
 
 ## Version History:
+**v2.2**: (Bugfixes. Small QOL changes. Hosting migrated away from GH LFS.)  
 **v2.1**: (Added shift and ctrl modifiers to "Alt + 8, 9 or 0" feature. Installer is now packed into one `.exe`.)  
 **v2.0**: (Performance tweaks. Added CapsLock floating indicator and NumPad homerow. Easy setup with configurator tool.)  
 **v1.7**: (Small bugfixes, code readability tweak and removal of some legacy classes.)  
