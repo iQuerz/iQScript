@@ -1,5 +1,5 @@
 ﻿SetWorkingDir %A_ScriptDir%
-currentVersion = 2.3
+currentVersion = 2.4
 
 CheckUpdate:
 
@@ -76,23 +76,30 @@ return
 !WheelDown:: SendInput {WheelRight}
 
 ;NumPadHomerowFloat Ctrl+CapsLock for Homerow NumPad. 'o' represents 0 because ; is used for arrow keys simulation(see below)
+npadBubblePID = -1
 numpad = false
 ^CapsLock::
 	numpad := !numpad
 	if(numpad == true){
-		Run iQnumpad.ahk
+		if(capsBubblePID == -1){
+			Run, iQnumpad.ahk 0 930,,, npadBubblePID
+			return
+		}
+		Process, Exist, %capsBubblePID%
+		if (ErrorLevel){
+			WinGetTitle, capsTitle, ahk_pid %capsBubblePID%
+			WinGetPos, X, Y, ,, %capsTitle%
+			if(X == 0){
+				Run, iQnumpad.ahk 170 930,,, npadBubblePID
+			}
+			else {
+				Run, iQnumpad.ahk 0 930,,, npadBubblePID
+			}
+		}
+		else
+			Run, iQnumpad.ahk 0 930,,, npadBubblePID
 	}
 return
-
-;CapsLockFloat CapsLock floating window
-*CapsLock::
-	SendInput {CapsLock}
-	check := GetKeyState("CapsLock", "T")
-	if(check == 1){
-		Run iQcaps.ahk
-	}
-return
-
 #if numpad == true
 	*a::1
 	*s::2
@@ -105,6 +112,32 @@ return
 	*l::9
 	*o::0
 #if
+
+;CapsLockFloat CapsLock floating window
+capsBubblePID = -1
+*CapsLock::
+	SendInput {CapsLock}
+	check := GetKeyState("CapsLock", "T")
+	if(check == 1){
+		if(capsBubblePID == -1){
+			Run, iQcaps.ahk 0 930,,, capsBubblePID
+			return
+		}
+		Process, Exist, %npadBubblePID%
+		if (ErrorLevel){
+			WinGetTitle, npadTitle, ahk_pid %npadBubblePID%
+			WinGetPos, X, Y, ,, %npadTitle%
+			if(X == 0){
+				Run, iQcaps.ahk 170 930,,, capsBubblePID
+			}
+			else{
+				Run, iQcaps.ahk 0 930,,, capsBubblePID
+			}
+		}
+		else
+			Run, iQcaps.ahk 0 930,,, capsBubblePID
+	}
+return
 
 ;SemiColonArrowSim Next bit of the code is for simulating arrow keys with I, J, K, L while holding down ';'. Helpful when your hands are at the homerow position
 SC0027 & I::Up

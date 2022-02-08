@@ -5,7 +5,7 @@ Gui, Color, 49B854
 Gui +LastFound +AlwaysOnTop +ToolWindow -Caption
 Gui, Add, Picture, w160 h72, ..\Tools-Data\NumPad\NumPad.png
 WinSet, TransColor, 49B854
-Gui, Show, x160 y930
+Gui, Show, x%1% y%2%
 SendInput !{Escape}
 
 ~^CapsLock::

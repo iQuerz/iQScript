@@ -4,7 +4,7 @@ using System.IO;
 
 namespace iQScript_Configurator
 {
-    class Configurator
+    public class Configurator
     {
         readonly Dictionary<Features, string> _features;
         readonly MainWindow _mainWindow;
@@ -98,7 +98,7 @@ namespace iQScript_Configurator
                 if (temp.StartsWith(';'))
                 {
                     _features.Add(feature, buffer);
-                    buffer = "";
+                    buffer = temp;
                     string featureString = temp.Substring(1, temp.IndexOf(" ") - 1);
                     feature = (Features)Enum.Parse(typeof(Features), featureString);
                     continue;
