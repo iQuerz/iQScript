@@ -4,17 +4,19 @@ I've made it so anyone can have this script without the need of setting it up. J
 ## Important note before you download the installer:
 Most browsers flag unsigned .exe files as dangerous or viruses. I do not have money to digitally sign my work, so you will just have to trust me, or read the code, which is openly available for everyone to check. This software is accessing OS reserved folders such as `Program Files`, which is likely one of the reasons it's being flagged as dangerous. I assure you that this software *does not* alter any OS files. It is *not* a virus. If you do not trust me, as I said, the code is openly available for everyone and you may check every bit of it. You may even build it yourself if you wish. The tools used are `Visual Studio 2019`. Project is built in `.NET Core 3.1`.
 
-### [Download Installer](https://download1583.mediafire.com/sndup0yni9wg/3klb9downcx559r/iQScript-Configurator.exe)
+### [Download Installer](https://download1496.mediafire.com/w44vk5mkouvg/n4gdob69o1j8sce/iQScript_Installer_2.4.exe)
 
 ## GoTo:
 [About](https://github.com/iQuerz/MyAHKScript#about)  
 [Feature List](https://github.com/iQuerz/MyAHKScript#feature-list)  
-[Current Version](https://github.com/iQuerz/MyAHKScript#current-version-23)  
+[Current Version](https://github.com/iQuerz/MyAHKScript#current-version-24)  
 [Version History](https://github.com/iQuerz/MyAHKScript#version-history)  
 [Future Plans](https://github.com/iQuerz/MyAHKScript#todo)
 
+
 ## About
 This is an [AutoHotkey](https://www.autohotkey.com/) script that I use on a daily basis for my PC. It features a few shortcuts that help me stay productive. They are mostly already existing shortcuts remapped to my liking, all around the use of the "alt" key. I set it up as such because I think the alt key is the best modifier for left hand shortcuts, which is 100% of the time on your keyboard, while the right hand is changing between the mouse and the keyboard. I will list the shortcuts below.
+
 
 ## Feature List:
 - **Automagical installer**:  
@@ -57,10 +59,11 @@ This is an [AutoHotkey](https://www.autohotkey.com/) script that I use on a dail
 *Checks for updates regularly and offers to download the new version installer*
 
 
-## Current Version: 2.3
-arrow keys simulation feature now works with every keyboard layout. Big installer improvements.
+## Current Version: 2.4
+Added dynamic location assignment for popup features. Minor installer logic changes.
 
 ## Version History:
+**v2.3**: (Arrow keys simulation feature now works with every keyboard layout. Big installer improvements.)  
 **v2.2**: (Bugfixes. Small QOL changes. Hosting migrated away from GH LFS.)  
 **v2.1**: (Added shift and ctrl modifiers to "Alt + 8, 9 or 0" feature. Installer is now packed into one `.exe`.)  
 **v2.0**: (Performance tweaks. Added CapsLock floating indicator and NumPad homerow. Easy setup with configurator tool.)  
