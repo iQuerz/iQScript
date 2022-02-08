@@ -46,10 +46,10 @@ This is an [AutoHotkey](https://www.autohotkey.com/) script that I use on a dail
 - **Alt + Scroll**:  
 *Horizontal scroll. Scrolling up means left and down means right.*
 
-- **CapsLock**:
+- **CapsLock**:  
 *A small green popup over the screen in the corner, active when your CapsLock state is on.*
 
-- **Ctrl + CapsLock**:
+- **Ctrl + CapsLock**:  
 *Toggles homerow into a numpad. a=1, s=2, d=3, etc.*
 
 - **Semicolon + `I`,`J`,`K` & `L` Keys**:  
