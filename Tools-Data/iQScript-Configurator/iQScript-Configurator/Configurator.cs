@@ -99,7 +99,7 @@ namespace iQScript_Configurator
                 {
                     _features.Add(feature, buffer);
                     buffer = temp;
-                    string featureString = temp.Substring(1, temp.IndexOf(" ") - 1);
+                    string featureString = temp[1..temp.IndexOf(" ")];
                     feature = (Features)Enum.Parse(typeof(Features), featureString);
                     continue;
                 }

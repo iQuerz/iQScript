@@ -1,26 +1,25 @@
 ﻿SetWorkingDir %A_ScriptDir%
-currentVersion = 2.4
 
+currentVersion := 2.4.1
 CheckUpdate:
-
-request := ComObjCreate("Msxml2.XMLHTTP")
+	request := ComObjCreate("Msxml2.XMLHTTP")
 	request.Open("GET", "https://raw.githubusercontent.com/iQuerz/MyAHKScript/main/ver.txt", true)
 	request.Send()
-	while (request.readyState != 4 && A_Index <= 50)    ; Wait for response 5s max (50*100 = 5000ms).
+	while (request.readyState != 4 && A_Index <= 50) {	; Wait for response 5s max (50*100 = 5000ms).
 		sleep 100
-	if request.readyState != 4 {
+	}
+	
+	if (request.readyState != 4) {
 		Goto Continue
 	}
-  	version := request.ResponseText
+	
+  	version := Trim(request.ResponseText, " `t`n") ;Trim the response
+	if(currentVersion != version) {
+		Run iQdialog.ahk
+	}
+	Continue:	;Continues to the script if update check fails
+	SetTimer, CheckUpdate, 86400000 ;(that's every 24h)
 
-If(currentVersion != version){
-	Run iQdialog.ahk
-}
-
-Continue:	; Continues to the script if update check fails
-SetTimer, CheckUpdate, 86400000 ;(that's every 24h)
-
-#MaxHotkeysPerInterval 15000
 #NoEnv
 #SingleInstance, Force
 #UseHook
@@ -31,7 +30,7 @@ SetTimer, CheckUpdate, 86400000 ;(that's every 24h)
 ;AltWMinimize alt+w for minimize
 !W:: WinMinimize A
 
-;Alt8Del alt + 8 for delete
+;Alt8Del alt+8 for delete // this chonk code is for allowing you to use it as a delete function as well as to delete text
 !8::
 	IfWinActive ahk_class CabinetWClass
     {
@@ -44,19 +43,22 @@ SetTimer, CheckUpdate, 86400000 ;(that's every 24h)
     else
         SendInput, {Delete}
 return
-!+8:: SendInput +{Delete}
+ +!8:: SendInput  +{Delete}
+^+!8:: SendInput ^+{Delete}
 
-;Alt9Home alt + 9 for home
-!9:: SendInput {Home}
-!^9:: SendInput ^{Home}
-!+9:: SendInput +{Home}
+;Alt9Home alt+9 for home
+  !9:: SendInput   {Home}
+ ^!9:: SendInput  ^{Home}
+ +!9:: SendInput  +{Home}
+^+!9:: SendInput ^+{Home}
 
-;Alt0End alt + 0 for end
-!0:: SendInput {End}
-!^0:: SendInput ^{End}
-!+0:: SendInput +{End}
+;Alt0End alt+0 for end
+  !0:: SendInput   {End}
+ ^!0:: SendInput  ^{End}
+ +!0:: SendInput  +{End}
+^+!0:: SendInput ^+{End}
 
-;AltEExplorer alt+e for my computer
+;AltEExplorer alt+e for file explorer // If you use any other 
 !E:: Run C:\Windows\explorer.exe
 
 ;AltANotificationPanel alt+a for notifications
@@ -144,5 +146,5 @@ SC0027 & I::Up
 SC0027 & J::Left
 SC0027 & K::Down
 SC0027 & L::Right
-+SC0027:: +{SC0027}
++SC0027::Send +{SC0027}
 SC0027::Send {SC0027}

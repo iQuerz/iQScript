@@ -9,7 +9,7 @@ namespace iQScript_Configurator
 {
     public partial class MainWindow : Form
     {
-        private string _version = "2.4";
+        private string _version = "2.4.1";
         Configurator _configurator;
         public bool _startup = true;
         public bool _startMenu = false;
@@ -172,10 +172,22 @@ namespace iQScript_Configurator
             }
             finally
             {
-                if(start)
-                    Process.Start(installPath + "\\Scripts\\iQscript.ahk");
-                IWin32Window owner = this;
-                MessageBox.Show(owner, "Selected features have been installed successfuly. Enjoy.", "iQScript-Configurator",
+                try
+                {
+                    if (start)
+                    {
+                        Process script = new Process();
+                        script.StartInfo = new ProcessStartInfo(installPath.Text + "\\Scripts\\iQscript.ahk");
+                        script.StartInfo.UseShellExecute = true;
+                        script.Start();
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show(this, "Couldn't run the script. Check if AHK is installed.\n(Can be done via \"Install AHK\" button in the installer.)", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                MessageBox.Show(this, "Selected features have been installed successfuly. Enjoy.", "iQScript-Configurator",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Dispose();
             }
@@ -220,5 +232,6 @@ namespace iQScript_Configurator
         }
 
         #endregion
+
     }
 }

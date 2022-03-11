@@ -1,11 +1,16 @@
 ﻿#SingleInstance Force
 
+Gui -Resize -MinimizeBox +AlwaysOnTop
+
 Gui, Font, cBlack
-Gui, Add, Text,, New version of script is available. Would you like to update?
-Gui, Add, Link,, <a href="https://github.com/iQuerz/MyAHKScript#readme">Download new version</a>
-Gui, Add, Button, gClose, Close
-Gui, Show, CenterAutosize, Update Available
-Return
+Gui, Margin, 20, 15
+
+Gui, Add, Text,, New version of iQScript is available to download. Would you like to update?
+Gui, Add, Link, x265 Right, <a href="https://github.com/iQuerz/iQScript#readme">Download new version</a>
+Gui, Add, Button, r1.3 w70 x304 gClose, Close
+Gui, Show, CenterAutosize, iQScript update
+
+Escape::ExitApp
 
 GuiClose:
 Close:
