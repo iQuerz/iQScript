@@ -4,14 +4,15 @@ I've made it so anyone can have this script without the need of setting it up. J
 ## Important note before you download the installer:
 Most browsers flag unsigned .exe files as dangerous or viruses. I do not have money to digitally sign my work, so you will just have to trust me, or read the code, which is openly available for everyone to check. This software is accessing OS reserved folders such as `Program Files`, which is likely one of the reasons it's being flagged as dangerous. I assure you that this software *does not* alter any OS files. It is *not* a virus. If you do not trust me, as I said, the code is openly available for everyone and you may check every bit of it. You may even build it yourself if you wish. The tools used are `Visual Studio 2019`. Project is built in `.NET Core 3.1`.
 
-### [Download Installer](https://download1496.mediafire.com/w44vk5mkouvg/n4gdob69o1j8sce/iQScript_Installer_2.4.exe)
+### [Download Installer](https://download849.mediafire.com/67hnhdpkjgeg/ic6cg39lbjfra8b/iQScript_Installer_2.4.1.exe)
 
 ## GoTo:
 [About](https://github.com/iQuerz/MyAHKScript#about)  
-[Feature List](https://github.com/iQuerz/MyAHKScript#feature-list)  
-[Current Version](https://github.com/iQuerz/MyAHKScript#current-version-24)  
-[Version History](https://github.com/iQuerz/MyAHKScript#version-history)  
-[Future Plans](https://github.com/iQuerz/MyAHKScript#todo)
+[Feature List](https://github.com/iQuerz/iQScript#feature-list)  
+[Current Version](https://github.com/iQuerz/iQScript#current-version-241)  
+[Version History](https://github.com/iQuerz/iQScript#version-history)  
+[Script Files](https://github.com/iQuerz/iQScript#script-files)
+[Future Plans](https://github.com/iQuerz/iQScript#todo)
 
 
 ## About
@@ -59,10 +60,11 @@ This is an [AutoHotkey](https://www.autohotkey.com/) script that I use on a dail
 *Checks for updates regularly and offers to download the new version installer*
 
 
-## Current Version: 2.4
-Added dynamic location assignment for popup features. Minor installer logic changes.
+## Current Version: 2.4.1
+Fixed some installation and update related bugs.
 
 ## Version History:
+**v2.4**: (Added dynamic location assignment for popup features. Minor installer logic changes.)  
 **v2.3**: (Arrow keys simulation feature now works with every keyboard layout. Big installer improvements.)  
 **v2.2**: (Bugfixes. Small QOL changes. Hosting migrated away from GH LFS.)  
 **v2.1**: (Added shift and ctrl modifiers to "Alt + 8, 9 or 0" feature. Installer is now packed into one `.exe`.)  
@@ -76,6 +78,8 @@ Added dynamic location assignment for popup features. Minor installer logic chan
 **v1.1**: (Fixed "file explorer not opening" and "shortcuts with windows button not working" issues)  
 **v1.0**: (first iteration, at least... when I got the idea to upload this here)
 
+## Script Files
+`"Hey! I know my stuff. I want to set it up myself! Manually!"` Don't worry. I got your back. If you want to copy the contents of the actual scripts and play with them *yourself*, you will find them inside `Tools-Data/iQScript-Configurator/iQScript-Configurator/Resources`. Or you can simply follow [this link here](https://github.com/iQuerz/iQScript/tree/main/Tools-Data/iQScript-Configurator/iQScript-Configurator/Resources).
 
 ## //TODO:
 - Add a hotkey for a gui with all the hotkeys (context menu)
