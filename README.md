@@ -11,7 +11,7 @@ Most browsers flag unsigned .exe files as dangerous or viruses. I do not have mo
 [Feature List](https://github.com/iQuerz/iQScript#feature-list)  
 [Current Version](https://github.com/iQuerz/iQScript#current-version-241)  
 [Version History](https://github.com/iQuerz/iQScript#version-history)  
-[Script Files](https://github.com/iQuerz/iQScript#script-files)
+[Script Files](https://github.com/iQuerz/iQScript#script-files)  
 [Future Plans](https://github.com/iQuerz/iQScript#todo)
 
 
