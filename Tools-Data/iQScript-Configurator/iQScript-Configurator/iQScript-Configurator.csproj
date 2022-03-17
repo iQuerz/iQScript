@@ -5,7 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>iQScript_Configurator</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
-    <Version>2.0.0</Version>
+    <Version>2.4.2</Version>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Universal key.pfx</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>

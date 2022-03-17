@@ -9,7 +9,7 @@ namespace iQScript_Configurator
 {
     public partial class MainWindow : Form
     {
-        private string _version = "2.4.1";
+        private string _version = "2.4.2";
         Configurator _configurator;
         public bool _startup = true;
         public bool _startMenu = false;

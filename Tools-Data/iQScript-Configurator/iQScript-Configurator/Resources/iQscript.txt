@@ -1,6 +1,6 @@
 ﻿SetWorkingDir %A_ScriptDir%
 
-currentVersion := 2.4.1
+currentVersion = 2.4.2
 CheckUpdate:
 	request := ComObjCreate("Msxml2.XMLHTTP")
 	request.Open("GET", "https://raw.githubusercontent.com/iQuerz/MyAHKScript/main/ver.txt", true)
