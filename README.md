@@ -4,7 +4,7 @@ I've made it so anyone can have this script without the need of setting it up. J
 ## Important note before you download the installer:
 Most browsers flag unsigned .exe files as dangerous or viruses. I do not have money to digitally sign my work, so you will just have to trust me, or read the code, which is openly available for everyone to check. This software is accessing OS reserved folders such as `Program Files`, which is likely one of the reasons it's being flagged as dangerous. I assure you that this software *does not* alter any OS files. It is *not* a virus. If you do not trust me, as I said, the code is openly available for everyone and you may check every bit of it. You may even build it yourself if you wish. The tools used are `Visual Studio 2019`. Project is built in `.NET Core 3.1`.
 
-### [Download Installer](https://download849.mediafire.com/67hnhdpkjgeg/ic6cg39lbjfra8b/iQScript_Installer_2.4.1.exe)
+### [Download Installer](https://download1325.mediafire.com/1oui33z7mffg/27cd5y7eozdk2h6/iQScript_Intaller_2.4.2.exe)
 
 ## GoTo:
 [About](https://github.com/iQuerz/MyAHKScript#about)  
@@ -60,11 +60,10 @@ This is an [AutoHotkey](https://www.autohotkey.com/) script that I use on a dail
 *Checks for updates regularly and offers to download the new version installer*
 
 
-## Current Version: 2.4.1
-Fixed some installation and update related bugs.
+## Current Version: 2.4.2
+Added dynamic location assignment for popup features. Minor installer logic changes.  
 
 ## Version History:
-**v2.4**: (Added dynamic location assignment for popup features. Minor installer logic changes.)  
 **v2.3**: (Arrow keys simulation feature now works with every keyboard layout. Big installer improvements.)  
 **v2.2**: (Bugfixes. Small QOL changes. Hosting migrated away from GH LFS.)  
 **v2.1**: (Added shift and ctrl modifiers to "Alt + 8, 9 or 0" feature. Installer is now packed into one `.exe`.)  
@@ -72,11 +71,11 @@ Fixed some installation and update related bugs.
 **v1.7**: (Small bugfixes, code readability tweak and removal of some legacy classes.)  
 **v1.6**: (Added support for automatic updates.)  
 **v1.5**: (New feature: Alt + 8, 9 or 0 for Delete, Home and End, respectively.)  
-**v1.4**: (Minor bugfixes and performance tweaks)  
+**v1.4**: (Minor bugfixes and performance tweaks.)  
 **v1.3**: (Fixed a bug where typing ';' or ':' sometimes wouldn't work.)  
 **v1.2**: (New feature: arrow keys simulation with `I`,`J`,`K` and `L` keys while holding down the `;` button.)  
-**v1.1**: (Fixed "file explorer not opening" and "shortcuts with windows button not working" issues)  
-**v1.0**: (first iteration, at least... when I got the idea to upload this here)
+**v1.1**: (Fixed "file explorer not opening" and "shortcuts with windows button not working" issues.)  
+**v1.0**: (First iteration, when I got the idea to upload this here.)
 
 ## Script Files
 `"Hey! I know my stuff. I want to set it up myself! Manually!"` Don't worry. I got your back. If you want to copy the contents of the actual scripts and play with them *yourself*, you will find them inside `Tools-Data/iQScript-Configurator/iQScript-Configurator/Resources`. Or you can simply follow [this link here](https://github.com/iQuerz/iQScript/tree/main/Tools-Data/iQScript-Configurator/iQScript-Configurator/Resources).
