@@ -73,6 +73,10 @@ return
 		SendInput !r
 #If
 
+#If A_PriorKey == "RWin"
+	RWin Up::SendInput !r
+#If
+
 ;AltScrollHorizontalScroll alt+scroll up to scroll left and down to scroll right.
 !WheelUp:: SendInput {WheelLeft}
 !WheelDown:: SendInput {WheelRight}
