@@ -4,12 +4,12 @@ I've made it so anyone can have this script without the need of setting it up. J
 ## Important note before you download the installer:
 Most browsers flag unsigned .exe files as dangerous or viruses. I do not have money to digitally sign my work, so you will just have to trust me, or read the code, which is openly available for everyone to check. This software is accessing OS reserved folders such as `Program Files`, which is likely one of the reasons it's being flagged as dangerous. I assure you that this software *does not* alter any OS files. It is *not* a virus. If you do not trust me, as I said, the code is openly available for everyone and you may check every bit of it. You may even build it yourself if you wish. The tools used are `Visual Studio 2019`. Project is built in `.NET Core 3.1`.
 
-### [Download Installer](https://download1325.mediafire.com/1oui33z7mffg/27cd5y7eozdk2h6/iQScript_Intaller_2.4.2.exe)
+### [Download Installer](https://download1334.mediafire.com/agpjuk7z1ulg/chang19p4rr5991/iQScript_Installer_2.4.3.exe)
 
 ## GoTo:
 [About](https://github.com/iQuerz/MyAHKScript#about)  
 [Feature List](https://github.com/iQuerz/iQScript#feature-list)  
-[Current Version](https://github.com/iQuerz/iQScript#current-version-241)  
+[Current Version](https://github.com/iQuerz/iQScript#current-version-243)  
 [Version History](https://github.com/iQuerz/iQScript#version-history)  
 [Script Files](https://github.com/iQuerz/iQScript#script-files)  
 [Future Plans](https://github.com/iQuerz/iQScript#todo)
@@ -61,8 +61,8 @@ This is an [AutoHotkey](https://www.autohotkey.com/) script that I use on a dail
 *Checks for updates regularly and offers to download the new version installer*
 
 
-## Current Version: 2.4.2
-Added dynamic location assignment for popup features. Minor installer logic changes.  
+## Current Version: 2.4.3
+Fixed "Right Win button not working" issue.  
 
 ## Version History:
 **v2.3**: (Arrow keys simulation feature now works with every keyboard layout. Big installer improvements.)  
