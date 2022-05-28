@@ -39,7 +39,8 @@ This is an [AutoHotkey](https://www.autohotkey.com/) script that I use on a dail
 *Opens Windows notifications.*
 
 - **Alt + S**:  
-*Runs Windows ScreenSnip for making a quick screenshot.*
+*Runs Windows ScreenSnip for making a quick screenshot. Requires one setting turned on:*  
+`"Settings" -> "Accessibility" -> "Keyboard" -> "Use the Print screen button to open screen snipping"`
 
 - **Windows Key**:  
 *Runs a [PowerToys](https://github.com/microsoft/PowerToys#microsoft-powertoys) feature called "Run". I use this in conjunction with [TaskBarX](https://chrisandriessen.nl/taskbarx), to create a clean environment.*
