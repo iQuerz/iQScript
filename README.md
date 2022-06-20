@@ -6,6 +6,7 @@ Most browsers flag unsigned .exe files as dangerous or viruses. I do not have mo
 **Update:** I added a "iQScriptNotifier" project. Before building the installer project, it's required to publish the notifier as a single file and place it in the resources folder of the installer project with the default name `iQScriptNotifier.exe`.
 
 ### [Download Installer](https://download2278.mediafire.com/58xlc1m2nvcg/boaeh9tgmh45ggr/iQScript_Installer_2.5.0.exe)  
+When updating, please turn off the running script from the taskbar by right-clicking on it and selecting `exit`. I'll try automating this sometime in the future.
 
 ## GoTo:
 [About](https://github.com/iQuerz/MyAHKScript#about)  
@@ -89,7 +90,9 @@ New feature: Alt + \ for toggling the script on and off. Switched to windows toa
 ## //TODO:
 - Add a hotkey for a gui with all the hotkeys (context menu)
 - Add an easily editable programs blacklist for select hotkeys
-- V3.0 Installer with easily expandable code
+- V3.0 Installer with easily expandable code  
+- Licence  
+- Automated updates, or at least something with a bit smoother experience  
 
 Any thoughts or suggestions are more than welcome. 
 If you like my work, I have another repository dedicated to running powershell by f12 key with additional fancy stuff. 
