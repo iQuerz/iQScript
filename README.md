@@ -1,15 +1,16 @@
 # Welcome to Version 2!🎉🎉
 I've made it so anyone can have this script without the need of setting it up. Just download, run the installer, select what features you want and you're done! You may choose for it to place the script shortcut in the start menu, on the desktop, and even run it on startup! It can install [AutoHotkey](https://www.autohotkey.com/) too, which is required for this script to work. Uninstalling the script is as simple as a click of a button. No harm done.
 
-## Important note before you download the installer:
-Most browsers flag unsigned .exe files as dangerous or viruses. I do not have money to digitally sign my work, so you will just have to trust me, or read the code, which is openly available for everyone to check. This software is accessing OS reserved folders such as `Program Files`, which is likely one of the reasons it's being flagged as dangerous. I assure you that this software *does not* alter any OS files. It is *not* a virus. If you do not trust me, as I said, the code is openly available for everyone and you may check every bit of it. You may even build it yourself if you wish. The tools used are `Visual Studio 2019`. Project is built in `.NET Core 3.1`.
+# Important note before you download the installer:
+Most browsers flag unsigned .exe files as dangerous or viruses. I do not have money to digitally sign my work, so you will just have to trust me, or read the code, which is openly available for everyone to check. This software is accessing OS reserved folders such as `Program Files`, which is likely one of the reasons it's being flagged as dangerous. I assure you that this software *does not* alter any OS files. It is *not* a virus. If you do not trust me, as I said, the code is openly available for everyone and you may check every bit of it. You may even build it yourself if you wish. The tools used are `Visual Studio 2019`. Project is built in `.NET Core 3.1`.  
+**Update:** I added a "iQScriptNotifier" project. Before building the installer project, it's required to publish the notifier as a single file and place it in the resources folder of the installer project with the default name `iQScriptNotifier.exe`.
 
-### [Download Installer](https://download1521.mediafire.com/x4uowq6pknrg/3h69x1qvk4fxarg/iQScript_Installer_2.4.3.exe)
+### [Download Installer](https://download1498.mediafire.com/eoy1v2nirzlg/ft3mrdufuqtus8u/iQScript_Installer_2.5.0.exe)
 
 ## GoTo:
 [About](https://github.com/iQuerz/MyAHKScript#about)  
 [Feature List](https://github.com/iQuerz/iQScript#feature-list)  
-[Current Version](https://github.com/iQuerz/iQScript#current-version-243)  
+[Current Version](https://github.com/iQuerz/iQScript#current-version-250)  
 [Version History](https://github.com/iQuerz/iQScript#version-history)  
 [Script Files](https://github.com/iQuerz/iQScript#script-files)  
 [Future Plans](https://github.com/iQuerz/iQScript#todo)
@@ -22,6 +23,9 @@ This is an [AutoHotkey](https://www.autohotkey.com/) script that I use on a dail
 ## Feature List:
 - **Automagical installer**:  
 *Portable installer that concocts the script to your liking. Just select what features you want.*
+
+- **Alt + \**:
+*Toggles the script on and off.*
 
 - **Alt + Q**:  
 *Closes the Active Window and brings to focus last one used.*
@@ -61,10 +65,11 @@ This is an [AutoHotkey](https://www.autohotkey.com/) script that I use on a dail
 *Checks for updates regularly and offers to download the new version installer*
 
 
-## Current Version: 2.4.3
-Fixed "Right Win button not working" issue.  
+## Current Version: 2.5.0
+New feature: Alt + \ for toggling the script on and off. Switched to windows toast notifications.  
 
 ## Version History:
+**v2.4**: (Added dynamic location assignment for popup features)  
 **v2.3**: (Arrow keys simulation feature now works with every keyboard layout. Big installer improvements.)  
 **v2.2**: (Bugfixes. Small QOL changes. Hosting migrated away from GH LFS.)  
 **v2.1**: (Added shift and ctrl modifiers to "Alt + 8, 9 or 0" feature. Installer is now packed into one `.exe`.)  
@@ -79,12 +84,12 @@ Fixed "Right Win button not working" issue.
 **v1.0**: (First iteration, when I got the idea to upload this here.)
 
 ## Script Files
-`"Hey! I know my stuff. I want to set it up myself! Manually!"` Don't worry. I got your back. If you want to copy the contents of the actual scripts and play with them *yourself*, you will find them inside `Tools-Data/iQScript-Configurator/iQScript-Configurator/Resources`. Or you can simply follow [this link here](https://github.com/iQuerz/iQScript/tree/main/Tools-Data/iQScript-Configurator/iQScript-Configurator/Resources).
+`"Hey! I know my stuff. I want to set it up myself! Manually!"` Don't worry. I got your back. If you want to copy the contents of the actual scripts and play with them *yourself*, you will find them inside `Tools-Data/iQScript-Configurator/iQScript-Configurator/Resources`. Or you can simply follow [this link here](https://github.com/iQuerz/iQScript/tree/main/Tools-Data/iQScript-Configurator/iQScript-Configurator/Resources). Note that you must add a line of code, `currentVersion = 2.5.0`, to the beginning of the main `iQScript.ahk` file for it to work.
 
 ## //TODO:
 - Add a hotkey for a gui with all the hotkeys (context menu)
 - Add an easily editable programs blacklist for select hotkeys
-- Add an on/off toggle hotkey for the whole script
+- V3.0 Installer with easily expandable code
 
 Any thoughts or suggestions are more than welcome. 
 If you like my work, I have another repository dedicated to running powershell by f12 key with additional fancy stuff. 
