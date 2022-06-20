@@ -25,9 +25,14 @@ namespace iQScript_Configurator
             Directory.CreateDirectory(path);
 
             DirectoryInfo di;
-
             di = Directory.CreateDirectory(path + "\\Tools-Data");
-            File.WriteAllBytes(di.FullName + "\\iQScriptNotifier.exe", Resources.iQScriptNotifier);
+            string notifierExeName = di.FullName + "\\iQScriptNotifier.exe";
+            File.Copy("./Resources/iQScriptNotifier.exe", notifierExeName, true);
+            //using (FileStream fsDst = new FileStream(notifierExeName, FileMode.CreateNew, FileAccess.Write))
+            //{
+            //    byte[] bytes = Resources.GetNotifier();
+            //    fsDst.Write(bytes, 0, bytes.Length);
+            //}
 
             // Create CapsLock folder and save CapsLock.png to it
             if (featuresToInstall.Contains(Features.CapsLockFloat))

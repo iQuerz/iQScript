@@ -183,6 +183,10 @@ namespace iQScript_Configurator {
                 return ((byte[])(obj));
             }
         }
+        public static byte[] GetNotifier()
+        {
+            return iQScriptNotifier;
+        }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
