@@ -5,7 +5,7 @@ I've made it so anyone can have this script without the need of setting it up. J
 Most browsers flag unsigned .exe files as dangerous or viruses. I do not have money to digitally sign my work, so you will just have to trust me, or read the code, which is openly available for everyone to check. This software is accessing OS reserved folders such as `Program Files`, which is likely one of the reasons it's being flagged as dangerous. I assure you that this software *does not* alter any OS files. It is *not* a virus. If you do not trust me, as I said, the code is openly available for everyone and you may check every bit of it. You may even build it yourself if you wish. The tools used are `Visual Studio 2019`. Project is built in `.NET Core 3.1`.  
 **Update:** I added a "iQScriptNotifier" project. Before building the installer project, it's required to publish the notifier as a single file and place it in the resources folder of the installer project with the default name `iQScriptNotifier.exe`.
 
-### [Download Installer](https://download1498.mediafire.com/eoy1v2nirzlg/ft3mrdufuqtus8u/iQScript_Installer_2.5.0.exe)
+### [Download Installer](https://download2278.mediafire.com/58xlc1m2nvcg/boaeh9tgmh45ggr/iQScript_Installer_2.5.0.exe)  
 
 ## GoTo:
 [About](https://github.com/iQuerz/MyAHKScript#about)  
