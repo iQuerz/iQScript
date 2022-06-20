@@ -25,7 +25,7 @@ This is an [AutoHotkey](https://www.autohotkey.com/) script that I use on a dail
 - **Automagical installer**:  
 *Portable installer that concocts the script to your liking. Just select what features you want.*
 
-- **Alt + \**:
+- **Alt + \\**:
 *Toggles the script on and off.*
 
 - **Alt + Q**:  
