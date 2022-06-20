@@ -29,6 +29,7 @@ namespace iQScript_Configurator
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.SaveButton = new System.Windows.Forms.Button();
             this.MandatoryChk = new System.Windows.Forms.CheckBox();
             this.AltQCloseChk = new System.Windows.Forms.CheckBox();
@@ -368,9 +369,10 @@ namespace iQScript_Configurator
             this.Controls.Add(this.AltQCloseChk);
             this.Controls.Add(this.MandatoryChk);
             this.Controls.Add(this.SaveButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "iQConfig";
+            this.Text = "iQScriptInstaller";
             this.Load += new System.EventHandler(this.MainWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.folderIcon)).EndInit();
             this.ResumeLayout(false);

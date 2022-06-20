@@ -1,6 +1,4 @@
 ﻿SetWorkingDir %A_ScriptDir%
-
-currentVersion = 2.4.3
 CheckUpdate:
 	request := ComObjCreate("Msxml2.XMLHTTP")
 	request.Open("GET", "https://raw.githubusercontent.com/iQuerz/MyAHKScript/main/ver.txt", true)
@@ -15,7 +13,7 @@ CheckUpdate:
 	
   	version := Trim(request.ResponseText, " `t`n") ;Trim the response
 	if(currentVersion != version) {
-		Run iQdialog.ahk
+		Run, ../Tools-Data/iQScriptNotifier.exe update
 	}
 	Continue:	;Continues to the script if update check fails
 	SetTimer, CheckUpdate, 86400000 ;(that's every 24h)
@@ -23,6 +21,16 @@ CheckUpdate:
 #NoEnv
 #SingleInstance, Force
 #UseHook
+
+!\::
+	Suspend Toggle
+	if(A_IsSuspended){
+		Run, ../Tools-Data/iQScriptNotifier.exe off
+	}
+	else{
+		Run, ../Tools-Data/iQScriptNotifier.exe on
+	}
+return
 
 ;AltQClose alt+q for close
 !Q:: WinClose A
@@ -69,8 +77,7 @@ return
 
 ;LWinPowerToys Use windows key for PowerToys Run, but retain the functionality of other shortcuts using Windows key
 #If A_PriorKey == "LWin"
-	LWin Up::
-		SendInput !r
+	LWin Up::SendInput !r
 #If
 
 #If A_PriorKey == "RWin"

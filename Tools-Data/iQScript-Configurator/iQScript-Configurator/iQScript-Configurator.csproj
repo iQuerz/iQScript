@@ -5,15 +5,17 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>iQScript_Configurator</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
-    <Version>2.4.2</Version>
+    <Version>2.5.0</Version>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Universal key.pfx</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <ApplicationManifest>iQScript.manifest</ApplicationManifest>
+    <PackageIcon>Logo.png</PackageIcon>
+    <ApplicationIcon>Resources\Logo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="app.manifest" />
+    <Content Include="Resources\Logo.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -51,6 +53,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Resources\NumPad.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="Resources\Logo.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

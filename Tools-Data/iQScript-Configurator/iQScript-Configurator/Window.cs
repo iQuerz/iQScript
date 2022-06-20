@@ -9,7 +9,6 @@ namespace iQScript_Configurator
 {
     public partial class MainWindow : Form
     {
-        private string _version = "2.4.2";
         Configurator _configurator;
         public bool _startup = true;
         public bool _startMenu = false;
@@ -32,7 +31,7 @@ namespace iQScript_Configurator
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Dispose();
             }
-            Text += $" - v{_version}";
+            Text += $" - v{Static.Version}";
             _configurator = new Configurator(this);
             string programFiles = Environment.ExpandEnvironmentVariables("%ProgramW6432%");
             installPath.Text = programFiles + "\\iQScript";
@@ -220,7 +219,7 @@ namespace iQScript_Configurator
 
             DirectoryInfo di = Directory.CreateDirectory(installPath.Text + "\\Logs");
             StreamWriter logger = new StreamWriter($"{di.FullName}\\log-{DateTime.Now.Day}-{DateTime.Now.Month}-{DateTime.Now.Year}_{DateTime.Now.Hour}h{DateTime.Now.Minute}m.log");
-            logger.WriteLine($"Version: {_version}");
+            logger.WriteLine($"Version: {Static.Version}");
             logger.WriteLine($"Error: {e.Message}");
             logger.WriteLine(e.StackTrace);
             logger.Dispose();

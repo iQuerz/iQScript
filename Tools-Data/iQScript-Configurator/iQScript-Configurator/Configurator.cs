@@ -21,10 +21,13 @@ namespace iQScript_Configurator
         {
             loadData();
 
-            #region Directories Setup
+            #region Directories Setup (+ caps, numpad, notifier.exe)
             Directory.CreateDirectory(path);
 
             DirectoryInfo di;
+
+            di = Directory.CreateDirectory(path + "\\Tools-Data");
+            File.WriteAllBytes(di.FullName + "\\iQScriptNotifier.exe", Resources.iQScriptNotifier);
 
             // Create CapsLock folder and save CapsLock.png to it
             if (featuresToInstall.Contains(Features.CapsLockFloat))
@@ -47,6 +50,7 @@ namespace iQScript_Configurator
             #region Main script file
             // Writes code for each feature the user wants to use.
             StreamWriter writer = new StreamWriter(path + "\\Scripts\\iQscript.txt");
+            writer.WriteLine($"currentVersion = {Static.Version}");
             foreach(var snippet in _features)
             {
                 if (featuresToInstall.Contains(snippet.Key))

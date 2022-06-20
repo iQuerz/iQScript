@@ -19,7 +19,7 @@ namespace iQScript_Configurator {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -88,7 +88,7 @@ namespace iQScript_Configurator {
         ///Gui +LastFound +AlwaysOnTop +ToolWindow -Caption
         ///Gui, Add, Picture, w160 h72, ..\Tools-Data\CapsLock\Capslock.png
         ///WinSet, TransColor, 49B854
-        ///Gui, Show, x0 y930
+        ///Gui, Show, x%1% y%2%
         ///SendInput !{Escape}
         ///
         ///CapsLock::
@@ -102,21 +102,27 @@ namespace iQScript_Configurator {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to #SingleInstance Force
+        ///   Looks up a localized string similar to ;WARNING: DEPRECATED.
+        ///;DO NOT REPORT BUGS ON THIS.
+        ///
+        ///#SingleInstance Force
+        ///
+        ///Gui -Resize -MinimizeBox +AlwaysOnTop
         ///
         ///Gui, Font, cBlack
-        ///Gui, Add, Text,, New version of script is available. Would you like to update?
-        ///Gui, Add, Link,, &lt;a href=&quot;https://github.com/iQuerz/MyAHKScript&quot;&gt;Read about new version&lt;/a&gt;
-        ///Gui, Font, cBlack
-        ///Gui, Add, Button, Default gClose,  I&apos;ll Update myself
-        ///Gui, Show, CenterAutosize, Update
-        ///Return
+        ///Gui, Margin, 20, 15
         ///
-        ///Update:
-        ///	request := ComObjCreate(&quot;Msxml2.XMLHTTP&quot;)
-        ///	request.Open(&quot;GET&quot;, &quot;https://raw.githubusercontent.com/iQuerz/MyAHKScript/main/script.ahk&quot;, true)
-        ///	request.Send()
-        ///	while [rest of string was truncated]&quot;;.
+        ///Gui, Add, Text,, New version of iQScript is available to download. Would you like to update?
+        ///Gui, Add, Link, x265 Right, &lt;a href=&quot;https://github.com/iQuerz/iQScript#readme&quot;&gt;Download new version&lt;/a&gt;
+        ///Gui, Add, Button, r1.3 w70 x304 gClose, Close
+        ///Gui, Show, CenterAutosize, iQScript update
+        ///
+        ///Escape::ExitApp
+        ///
+        ///GuiClose:
+        ///Close:
+        ///	ExitApp
+        ///.
         /// </summary>
         public static string iQdialog {
             get {
@@ -132,7 +138,7 @@ namespace iQScript_Configurator {
         ///Gui +LastFound +AlwaysOnTop +ToolWindow -Caption
         ///Gui, Add, Picture, w160 h72, ..\Tools-Data\NumPad\NumPad.png
         ///WinSet, TransColor, 49B854
-        ///Gui, Show, x160 y930
+        ///Gui, Show, x%1% y%2%
         ///SendInput !{Escape}
         ///
         ///~^CapsLock::
@@ -146,27 +152,35 @@ namespace iQScript_Configurator {
         
         /// <summary>
         ///   Looks up a localized string similar to SetWorkingDir %A_ScriptDir%
-        ///currentVersion = 2.0
-        ///
-        ///request := ComObjCreate(&quot;Msxml2.XMLHTTP&quot;)
+        ///CheckUpdate:
+        ///	request := ComObjCreate(&quot;Msxml2.XMLHTTP&quot;)
         ///	request.Open(&quot;GET&quot;, &quot;https://raw.githubusercontent.com/iQuerz/MyAHKScript/main/ver.txt&quot;, true)
         ///	request.Send()
-        ///	while (request.readyState != 4 &amp;&amp; A_Index &lt;= 50)    ; Wait for response 5s max (50*100 = 5000ms).
+        ///	while (request.readyState != 4 &amp;&amp; A_Index &lt;= 50) {	; Wait for response 5s max (50*100 = 5000ms).
         ///		sleep 100
-        ///	if request.readyState != 4 {
+        ///	}
+        ///	
+        ///	if (request.readyState != 4) {
         ///		Goto Continue
         ///	}
-        ///  	version := request.ResponseText
-        ///
-        ///If(currentVersion != version){
-        ///	Run iQdialog.ahk
-        ///}
-        ///
-        ///Continue:	; Continues to the script if upda [rest of string was truncated]&quot;;.
+        ///	
+        ///  	version := Trim(request.ResponseText, &quot; `t`n&quot;) ;Trim the response
+        ///	if(currentVersion != version) {
+        ///		Run, ../Tools-Data/iQScriptNo [rest of string was truncated]&quot;;.
         /// </summary>
         public static string iQscript {
             get {
                 return ResourceManager.GetString("iQscript", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] iQScriptNotifier {
+            get {
+                object obj = ResourceManager.GetObject("iQScriptNotifier", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

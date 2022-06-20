@@ -1,4 +1,7 @@
-﻿#SingleInstance Force
+﻿;WARNING: DEPRECATED.
+;DO NOT REPORT BUGS ON THIS.
+
+#SingleInstance Force
 
 Gui -Resize -MinimizeBox +AlwaysOnTop
 
