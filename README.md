@@ -4,7 +4,7 @@ I've made it so anyone can have this script without the need of setting it up. J
 ## Important note before you download the installer:
 Most browsers flag unsigned .exe files as dangerous or viruses. I do not have money to digitally sign my work, so you will just have to trust me, or read the code, which is openly available for everyone to check. This software is accessing OS reserved folders such as `Program Files`, which is likely one of the reasons it's being flagged as dangerous. I assure you that this software *does not* alter any OS files. It is *not* a virus. If you do not trust me, as I said, the code is openly available for everyone and you may check every bit of it. You may even build it yourself if you wish. The tools used are `Visual Studio 2019`. Project is built in `.NET Core 3.1`.
 
-### [Download Installer](https://download1334.mediafire.com/agpjuk7z1ulg/chang19p4rr5991/iQScript_Installer_2.4.3.exe)
+### [Download Installer](https://download1521.mediafire.com/x4uowq6pknrg/3h69x1qvk4fxarg/iQScript_Installer_2.4.3.exe)
 
 ## GoTo:
 [About](https://github.com/iQuerz/MyAHKScript#about)  
