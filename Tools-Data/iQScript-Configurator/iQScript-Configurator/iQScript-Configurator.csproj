@@ -5,11 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>iQScript_Configurator</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
-    <Version>2.5.0</Version>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>Universal key.pfx</AssemblyOriginatorKeyFile>
-    <DelaySign>false</DelaySign>
-    <ApplicationManifest>iQScript.manifest</ApplicationManifest>
+    <Version>2.5.1</Version>
     <PackageIcon>Logo.png</PackageIcon>
     <ApplicationIcon>Resources\Logo.ico</ApplicationIcon>
   </PropertyGroup>
@@ -50,9 +46,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Resources\iQscript.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Resources\iQScriptNotifier.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Resources\NumPad.png">

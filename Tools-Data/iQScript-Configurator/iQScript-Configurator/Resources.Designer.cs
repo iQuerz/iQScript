@@ -165,27 +165,12 @@ namespace iQScript_Configurator {
         ///	}
         ///	
         ///  	version := Trim(request.ResponseText, &quot; `t`n&quot;) ;Trim the response
-        ///	if(currentVersion != version) {
-        ///		Run, ../Tools-Data/iQScriptNo [rest of string was truncated]&quot;;.
+        ///	if(version == &quot;&quot;) ;if we got no response, either from no interne [rest of string was truncated]&quot;;.
         /// </summary>
         public static string iQscript {
             get {
                 return ResourceManager.GetString("iQscript", resourceCulture);
             }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        public static byte[] iQScriptNotifier {
-            get {
-                object obj = ResourceManager.GetObject("iQScriptNotifier", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        public static byte[] GetNotifier()
-        {
-            return iQScriptNotifier;
         }
         
         /// <summary>

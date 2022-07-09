@@ -12,6 +12,10 @@ CheckUpdate:
 	}
 	
   	version := Trim(request.ResponseText, " `t`n") ;Trim the response
+	if(version == "") ;if we got no response, either from no internet or something else, continue
+	{
+		Goto Continue
+	}
 	if(currentVersion != version) {
 		Run, ../Tools-Data/iQScriptNotifier.exe update
 	}
