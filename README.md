@@ -89,6 +89,7 @@ Fixed "'Update available' when there's no internet" bug. Installer takes almost 
 `"Hey! I know my stuff. I want to set it up myself! Manually!"` Don't worry. I got your back. If you want to copy the contents of the actual scripts and play with them *yourself*, you will find them inside `Tools-Data/iQScript-Configurator/iQScript-Configurator/Resources`. Or you can simply follow [this link here](https://github.com/iQuerz/iQScript/tree/main/Tools-Data/iQScript-Configurator/iQScript-Configurator/Resources). Note that you must add a line of code, `currentVersion = 2.5.1`, to the beginning of the main `iQScript.ahk` file for it to work.
 
 ## //TODO:
+- Add window layouts, kinda like virtual desktop but faster & for bigger monitors. Kinda like i3 wm workspaces. My idea was to have Alt+Shift+numbers to go through them :)
 - Add a hotkey for a gui with all the hotkeys (context menu)
 - Add an easily editable programs blacklist for select hotkeys
 - V3.0 Installer with easily expandable code  
